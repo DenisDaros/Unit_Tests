@@ -13,24 +13,23 @@
 
 const average = (array) => {
   try {
-    if (array.length === 0){
-      throw new Error('undefined')
+    if (array.length === 0) {
+      throw new Error('undefined');
     }
-    let numeros = 0
-    for (let index in array) {
-      if (typeof array[index] !== "number") {
-        throw new Error('undefined')
+    let numeros = 0;
+    for (let index = 0; index < array.length; index += 1) {
+      if (typeof array[index] !== 'number') {
+        throw new Error('undefined');
       }
-      numeros += array[index]
+      numeros += array[index];
     }
     let numeroTolal = array.length;
-    let mediaNumeros = numeros / numeroTolal
-    return Math.round(mediaNumeros)
+    let mediaNumeros = numeros / numeroTolal;
+    return Math.round(mediaNumeros);
   } catch (error) {
-    console.log(error.message)
+    console.log(error.message);
   }
 };
-console.log(average([2,'2']))
-
+console.log(average([2, '2']));
 
 module.exports = average;
