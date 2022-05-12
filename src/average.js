@@ -10,7 +10,27 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-xablau
-const average = () => {};
+
+const average = (array) => {
+  try {
+    if (array.length === 0){
+      throw new Error('undefined')
+    }
+    let numeros = 0
+    for (let index in array) {
+      if (typeof array[index] !== "number") {
+        throw new Error('undefined')
+      }
+      numeros += array[index]
+    }
+    let numeroTolal = array.length;
+    let mediaNumeros = numeros / numeroTolal
+    return Math.round(mediaNumeros)
+  } catch (error) {
+    console.log(error.message)
+  }
+};
+console.log(average([2,'2']))
+
 
 module.exports = average;
