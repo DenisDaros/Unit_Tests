@@ -26,6 +26,6 @@ trabalho na Trybe e mando muito em programação!
   }
      return undefined;
 };
-console.log(vqv('denis',27));
+console.log(vqv('denis', 27));
 
 module.exports = vqv;
